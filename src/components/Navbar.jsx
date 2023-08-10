@@ -18,7 +18,7 @@ const Navbar = () => {
 						setActive('');
 						window.scrollTo(0, 0);
 					}}>
-					<img src="../../public/logo2.png" alt="logo" className="w-9 h-9 object-contain" />
+					<img src="../../public/logo.png" alt="logo" className="w-16 h-auto object-contain" />
 					<p className="text-white text-[18px] font-bold cursor-pointer flex">
 						Manuel Montero &nbsp;<span className="sm:block hidden">| Portfolio</span>
 					</p>
