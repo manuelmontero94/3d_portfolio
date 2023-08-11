@@ -23,6 +23,10 @@ import {
 	tripguide,
 	typescript,
 	web,
+	sqlserver,
+	mysql,
+	nestjs,
+	firebase,
 } from '../assets';
 
 export const navLinks = [
@@ -41,11 +45,11 @@ export const navLinks = [
 ];
 
 const icons = [
+	{ name: 'logo-linkedin', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_LINKEDIN },
+	{ name: 'logo-instagram', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_INSTAGRAM },
+	{ name: 'logo-github', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_GITHUB },
 	{ name: 'logo-facebook', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_FACEBOOK },
 	{ name: 'logo-gitlab', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_GITLAB },
-	{ name: 'logo-instagram', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_INSTAGRAM },
-	{ name: 'logo-linkedin', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_LINKEDIN },
-	{ name: 'logo-github', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_GITHUB },
 ];
 
 const services = [
@@ -93,32 +97,32 @@ const technologies = [
 		icon: redux,
 	},
 	{
-		name: 'Tailwind CSS',
-		icon: tailwind,
+		name: 'SQL Server',
+		icon: sqlserver,
 	},
 	{
 		name: 'Node JS',
 		icon: nodejs,
 	},
 	{
-		name: 'MongoDB',
-		icon: mongodb,
+		name: 'My SQL',
+		icon: mysql,
 	},
 	{
-		name: 'Three JS',
-		icon: threejs,
+		name: 'Nest JS',
+		icon: nestjs,
 	},
 	{
 		name: 'git',
 		icon: git,
 	},
+	// {
+	// 	name: 'figma',
+	// 	icon: figma,
+	// },
 	{
-		name: 'figma',
-		icon: figma,
-	},
-	{
-		name: 'docker',
-		icon: docker,
+		name: 'Firebase',
+		icon: firebase,
 	},
 ];
 
