@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, use } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
@@ -6,6 +6,10 @@ import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import { useDispatch } from 'react-redux';
+import showNotificationMessage from '../utils/message.utils';
+import { showMessage } from '../redux/states/messageSlice';
+import { setNewContact } from '../redux/states/contactSlice';
 
 const Contact = () => {
 	// TODO
@@ -25,6 +29,8 @@ const Contact = () => {
 		message: '',
 	});
 
+	const dispatch = useDispatch();
+
 	const [loading, setLoading] = useState(false);
 
 	const handleChange = (e) => {
@@ -38,30 +44,38 @@ const Contact = () => {
 	};
 
 	const handleSubmit = (e) => {
+		dispatch(setNewContact(form));
 		e.preventDefault();
 		setLoading(true);
 
 		emailjs
 			.send(
 				import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-				// 'service_ide0w9c',
 				import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-				// 'template_4sg8k0a',
 				{
 					from_name: form.name,
-					// to_name: 'Montero Manuel',
 					to_name: import.meta.env.VITE_APP_EMAILJS_TO_NAME,
 					from_email: form.email,
-					// to_email: 'manuel.monterocalvo@gmail.com',
 					to_email: import.meta.env.VITE_APP_EMAILJS_TO_EMAIL,
 					message: form.message,
 				},
 				import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-				// 'bQ52cnR-X-wNjH94R'
 			)
 			.then(
 				() => {
 					setLoading(false);
+					dispatch();
+					// showMessage(showNotificationMessage('Thank you. I will get back to you as soon as possible.', 'success'))
+
+					// showMessage({
+					// 	message: 'Thank you. I will get back to you as soon as possible.!',
+					// 	autoHideDuration: 6000,
+					// 	anchorOrigin: {
+					// 		vertical: 'top',
+					// 		horizontal: 'center',
+					// 	},
+					// 	variant: 'success',
+					// })
 					alert('Thank you. I will get back to you as soon as possible.');
 
 					setForm({
