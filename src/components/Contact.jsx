@@ -9,12 +9,12 @@ import { slideIn } from '../utils/motion';
 
 const Contact = () => {
 	// TODO
-	// * Add environments variables
+	// * Add environments variables ✅
 	// * Add form validation
 	// * Add form validation error messages
 	// * Add form validation success message
 	// * Add README.md file personalized
-	// * Add favicon
+	// * Add favicon ✅
 	// * Add btn to scroll to top
 	// * Clean Code
 
@@ -43,19 +43,21 @@ const Contact = () => {
 
 		emailjs
 			.send(
-				// import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-				'service_ide0w9c',
-				// import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-				'template_4sg8k0a',
+				import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+				// 'service_ide0w9c',
+				import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+				// 'template_4sg8k0a',
 				{
 					from_name: form.name,
-					to_name: 'Montero Manuel',
+					// to_name: 'Montero Manuel',
+					to_name: import.meta.env.VITE_APP_EMAILJS_TO_NAME,
 					from_email: form.email,
-					to_email: 'manuel.monterocalvo@gmail.com',
+					// to_email: 'manuel.monterocalvo@gmail.com',
+					to_email: import.meta.env.VITE_APP_EMAILJS_TO_EMAIL,
 					message: form.message,
 				},
-				// import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-				'bQ52cnR-X-wNjH94R'
+				import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+				// 'bQ52cnR-X-wNjH94R'
 			)
 			.then(
 				() => {

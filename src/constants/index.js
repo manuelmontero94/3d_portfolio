@@ -40,6 +40,14 @@ export const navLinks = [
 	},
 ];
 
+const icons = [
+	{ name: 'logo-facebook', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_FACEBOOK },
+	{ name: 'logo-gitlab', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_GITLAB },
+	{ name: 'logo-instagram', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_INSTAGRAM },
+	{ name: 'logo-linkedin', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_LINKEDIN },
+	{ name: 'logo-github', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_GITHUB },
+];
+
 const services = [
 	{
 		title: 'Web Developer',
@@ -171,25 +179,31 @@ const experiences = [
 
 const testimonials = [
 	{
-		testimonial: 'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-		name: 'Sara Lee',
-		designation: 'CFO',
-		company: 'Acme Co',
-		image: 'https://randomuser.me/api/portraits/women/4.jpg',
+		testimonial:
+			"Manuel is a talented developer who is always willing to go the extra mile to get the job done. I highly recommend him and I'm sure that he is a great addition to any team also.",
+		name: 'Edel Agüero',
+		designation: 'CEO',
+		company: 'Qubo Systems S.A',
+		image:
+			'https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/70784167_10214619900043121_3113283361779482624_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=xrpmkEaaZP8AX9Iirgt&_nc_ht=scontent-mia3-1.xx&oh=00_AfCHwyZkW7-gH7oD2t2GSG3fI2s_JAkp_hrF9UBC01gfUQ&oe=64FD6E35',
 	},
 	{
-		testimonial: "I've never met a web developer who truly cares about their clients' success like Rick does.",
-		name: 'Chris Brown',
-		designation: 'COO',
-		company: 'DEF Corp',
-		image: 'https://randomuser.me/api/portraits/men/5.jpg',
+		testimonial:
+			"He is a good person, proactive and not afraid to take a challenge. I had the opportunity to know him at university as student. I'm sure he will be a great addition for any company.",
+		name: 'Roberth Solís',
+		designation: 'Senior Python Developer',
+		company: 'Gorilla Logic',
+		image:
+			'https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/271901877_1364365900680150_60369834758683314_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=be3454&_nc_ohc=9Zs-pJitUM0AX-pwKp-&_nc_ht=scontent-mia3-2.xx&oh=00_AfATSawfzQOI9oSRCVA0xcYhp5KfAhC1oyu40V0-3K71Qg&oe=64DB621B',
 	},
 	{
-		testimonial: "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-		name: 'Lisa Wang',
-		designation: 'CTO',
-		company: '456 Enterprises',
-		image: 'https://randomuser.me/api/portraits/women/6.jpg',
+		testimonial:
+			'Manuel is a hard worker person, selfreliance, proactive and not afraid to take a challenge. I had the opportunity to work with him and im sure he will be a great addition for any company.',
+		name: 'Daniel Jirón',
+		designation: 'Senior Software Engineer',
+		company: 'Sapiens Corp',
+		image:
+			'https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/223563096_6098992106785240_8451777181952687049_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=F2XYUqgwg2YAX_CGj7U&_nc_ht=scontent-mia3-2.xx&oh=00_AfASBhymSHPgXKrRWeDKHnWgss8Xr4XR2k8iIibR5FQRiw&oe=64DA3FED',
 	},
 ];
 
@@ -259,4 +273,4 @@ const projects = [
 	},
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { icons, services, technologies, experiences, testimonials, projects };
