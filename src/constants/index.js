@@ -27,6 +27,7 @@ import {
 	mysql,
 	nestjs,
 	firebase,
+	cifradocesar,
 } from '../assets';
 
 export const navLinks = [
@@ -212,26 +213,47 @@ const testimonials = [
 ];
 
 const projects = [
+	// {
+	// 	name: 'Car Rent',
+	// 	description:
+	// 		'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+	// 	tags: [
+	// 		{
+	// 			name: 'react',
+	// 			color: 'blue-text-gradient',
+	// 		},
+	// 		{
+	// 			name: 'mongodb',
+	// 			color: 'green-text-gradient',
+	// 		},
+	// 		{
+	// 			name: 'tailwind',
+	// 			color: 'pink-text-gradient',
+	// 		},
+	// 	],
+	// 	image: carrent,
+	// 	source_code_link: 'https://github.com/',
+	// },
 	{
-		name: 'Car Rent',
+		name: 'Cesar Encryption',
 		description:
-			'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+			'Is classified as a substitution encryption in which the alphabet in the plaintext is displaced by a fixed number in the alphabet.',
 		tags: [
 			{
-				name: 'react',
+				name: 'html',
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'mongodb',
+				name: 'css',
 				color: 'green-text-gradient',
 			},
 			{
-				name: 'tailwind',
+				name: 'javascript',
 				color: 'pink-text-gradient',
 			},
 		],
-		image: carrent,
-		source_code_link: 'https://github.com/',
+		image: cifradocesar,
+		source_code_link: 'https://github.com/manuelmontero94/cifrado-cesar',
 	},
 	{
 		name: 'Job IT',

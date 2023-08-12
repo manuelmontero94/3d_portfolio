@@ -24,6 +24,7 @@ import sqlserver from './tech/sqlserver.png';
 import mysql from './tech/mysql.png';
 import nestjs from './tech/nestjs.png';
 import firebase from './tech/firebase.png';
+import cifradocesar from './cifradocesar.png';
 
 import meta from './company/meta.png';
 import shopify from './company/shopify.png';
@@ -67,4 +68,5 @@ export {
 	mysql,
 	nestjs,
 	firebase,
+	cifradocesar,
 };

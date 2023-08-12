@@ -9,8 +9,10 @@ import { setNewContact } from '../redux/states/contactSlice';
 import { styles } from '../styles';
 import { slideIn } from '../utils/motion';
 import { EarthCanvas } from './canvas';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+	const navigate = useNavigate();
 	// TODO
 	// * Add environments variables ✅
 	// * Add form validation
@@ -46,35 +48,42 @@ const Contact = () => {
 		e.preventDefault();
 		setLoading(true);
 
-		emailjs
-			.send(
-				import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-				import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-				{
-					from_name: form.name,
-					to_name: import.meta.env.VITE_APP_EMAILJS_TO_NAME,
-					from_email: form.email,
-					to_email: import.meta.env.VITE_APP_EMAILJS_TO_EMAIL,
-					message: form.message,
-				},
-				import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-			)
-			.then(
-				() => {
-					setLoading(false);
-					toast.success('Thank you. I will get back to you as soon as possible!');
+		toast.promise(
+			emailjs
+				.send(
+					import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+					import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+					{
+						from_name: form.name,
+						to_name: import.meta.env.VITE_APP_EMAILJS_TO_NAME,
+						from_email: form.email,
+						to_email: import.meta.env.VITE_APP_EMAILJS_TO_EMAIL,
+						message: form.message,
+					},
+					import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+				)
+				.then(
+					() => {
+						navigate('/');
+						window.scrollTo(0, 0);
+						setLoading(false);
 
-					setForm({
-						name: '',
-						email: '',
-						message: '',
-					});
-				},
-				(error) => {
-					setLoading(false);
-					toast.error('Ahh, something went wrong. Please try again.😢');
-				}
-			);
+						setForm({
+							name: '',
+							email: '',
+							message: '',
+						});
+					},
+					(error) => {
+						setLoading(false);
+					}
+				),
+			{
+				loading: 'Sending...',
+				success: <b>Thank you. I will get back to you as soon as possible!</b>,
+				error: <b>Ahh, something went wrong. Please try again.</b>,
+			}
+		);
 	};
 
 	return (
