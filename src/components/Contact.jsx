@@ -1,15 +1,14 @@
-import React, { useRef, useState, use } from 'react';
-import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+import React, { useRef, useState } from 'react';
 
-import { styles } from '../styles';
-import { EarthCanvas } from './canvas';
-import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
+import { toast } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
-import showNotificationMessage from '../utils/message.utils';
-import { showMessage } from '../redux/states/messageSlice';
+import { SectionWrapper } from '../hoc';
 import { setNewContact } from '../redux/states/contactSlice';
+import { styles } from '../styles';
+import { slideIn } from '../utils/motion';
+import { EarthCanvas } from './canvas';
 
 const Contact = () => {
 	// TODO
@@ -34,7 +33,6 @@ const Contact = () => {
 	const [loading, setLoading] = useState(false);
 
 	const handleChange = (e) => {
-		// const { target } = e;
 		const { name, value } = e.target;
 
 		setForm({
@@ -64,19 +62,7 @@ const Contact = () => {
 			.then(
 				() => {
 					setLoading(false);
-					dispatch();
-					// showMessage(showNotificationMessage('Thank you. I will get back to you as soon as possible.', 'success'))
-
-					// showMessage({
-					// 	message: 'Thank you. I will get back to you as soon as possible.!',
-					// 	autoHideDuration: 6000,
-					// 	anchorOrigin: {
-					// 		vertical: 'top',
-					// 		horizontal: 'center',
-					// 	},
-					// 	variant: 'success',
-					// })
-					alert('Thank you. I will get back to you as soon as possible.');
+					toast.success('Thank you. I will get back to you as soon as possible!');
 
 					setForm({
 						name: '',
@@ -86,9 +72,7 @@ const Contact = () => {
 				},
 				(error) => {
 					setLoading(false);
-					console.error(error);
-
-					alert('Ahh, something went wrong. Please try again.');
+					toast.error('Ahh, something went wrong. Please try again.😢');
 				}
 			);
 	};

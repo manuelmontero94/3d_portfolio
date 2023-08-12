@@ -3,10 +3,14 @@ import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Stars
 import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
 	return (
 		<Provider store={store}>
+			<div>
+				<Toaster />
+			</div>
 			<BrowserRouter>
 				<div className="relative z-0 bg-primary">
 					<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
