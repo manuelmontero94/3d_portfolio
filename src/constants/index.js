@@ -29,6 +29,9 @@ import {
 	firebase,
 	cifradocesar,
 	traveladvisor,
+	portfolio,
+	favoritesapp,
+	portfolio2,
 } from '../assets';
 
 export const navLinks = [
@@ -250,7 +253,7 @@ const projects = [
 				color: 'green-text-gradient',
 			},
 			{
-				name: 'scss',
+				name: 'tailwindcss',
 				color: 'pink-text-gradient',
 			},
 		],
@@ -258,9 +261,74 @@ const projects = [
 		source_code_link: 'https://github.com/manuelmontero94/travel-advisor',
 	},
 	{
+		name: '3D Personal Portfolio',
+		description:
+			"It's a simple method of encoding messages. Caesar ciphers use a substitution method where letters in the alphabet are shifted by some fixed number of spaces to yield an encoding alphabet. It was build with HTML, CSS and JavaScript also.",
+		tags: [
+			{
+				name: 'html',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'css',
+				color: 'green-text-gradient',
+			},
+			{
+				name: 'javascript',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: portfolio2,
+		source_code_link: 'https://github.com/manuelmontero94/cifrado-cesar',
+	},
+	{
+		name: 'Favorites App',
+		description:
+			"It's a responsive website using react. It contains a table of favorites, using react hooks and react redux. The table contains a search bar to filter the information. At the same time, it has pagination to show the information in a better way. ",
+		tags: [
+			{
+				name: 'reactjs',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'redux',
+				color: 'green-text-gradient',
+			},
+			{
+				name: 'materialui',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: favoritesapp,
+		source_code_link: 'https://github.com/',
+	},
+
+	{
+		name: 'Personal Portfolio',
+		description:
+			'This is a responsive portfolio website using Html, Css and JavaScript, with a beautiful user interface. It contains different components like Header, Home, About, Skills, Qualification, Services, Project in mind, Testimonial, Contact and the Footer too.',
+		tags: [
+			{
+				name: 'html',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'css',
+				color: 'green-text-gradient',
+			},
+			{
+				name: 'javascript',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: portfolio,
+		source_code_link: 'https://github.com/',
+	},
+
+	{
 		name: 'Cesar Encryption',
 		description:
-			'This is a simple page. Is classified as a substitution encryption in which the alphabet in the plaintext is displaced by a fixed number in the alphabet.',
+			"It's a simple method of encoding messages. Caesar ciphers use a substitution method where letters in the alphabet are shifted by some fixed number of spaces to yield an encoding alphabet. It was build with HTML, CSS and JavaScript also.",
 		tags: [
 			{
 				name: 'html',
@@ -277,27 +345,6 @@ const projects = [
 		],
 		image: cifradocesar,
 		source_code_link: 'https://github.com/manuelmontero94/cifrado-cesar',
-	},
-	{
-		name: 'Trip Guide',
-		description:
-			'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-		tags: [
-			{
-				name: 'nextjs',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'supabase',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'css',
-				color: 'pink-text-gradient',
-			},
-		],
-		image: tripguide,
-		source_code_link: 'https://github.com/',
 	},
 ];
 
