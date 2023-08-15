@@ -28,6 +28,7 @@ import {
 	nestjs,
 	firebase,
 	cifradocesar,
+	traveladvisor,
 } from '../assets';
 
 export const navLinks = [
@@ -47,10 +48,11 @@ export const navLinks = [
 
 const icons = [
 	{ name: 'logo-linkedin', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_LINKEDIN },
-	{ name: 'logo-instagram', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_INSTAGRAM },
 	{ name: 'logo-github', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_GITHUB },
-	{ name: 'logo-facebook', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_FACEBOOK },
 	{ name: 'logo-gitlab', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_GITLAB },
+	{ name: 'logo-whatsapp', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_WHATSAPP },
+	{ name: 'logo-instagram', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_INSTAGRAM },
+	{ name: 'logo-facebook', link: import.meta.env.VITE_APP_SOCIAL_MEDIA_FACEBOOK },
 ];
 
 const services = [
@@ -235,9 +237,30 @@ const projects = [
 	// 	source_code_link: 'https://github.com/',
 	// },
 	{
+		name: 'Travel Advisor',
+		description:
+			'It is a website adaptable to all devices using Google Maps. With Geolocation, Google Maps API, Searching for places, Fetching restaurants, hotels and attractions based on location from specialized Rapid APIs, data filtering and much more.',
+		tags: [
+			{
+				name: 'react',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'restapi',
+				color: 'green-text-gradient',
+			},
+			{
+				name: 'scss',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: traveladvisor,
+		source_code_link: 'https://github.com/manuelmontero94/travel-advisor',
+	},
+	{
 		name: 'Cesar Encryption',
 		description:
-			'Is classified as a substitution encryption in which the alphabet in the plaintext is displaced by a fixed number in the alphabet.',
+			'This is a simple page. Is classified as a substitution encryption in which the alphabet in the plaintext is displaced by a fixed number in the alphabet.',
 		tags: [
 			{
 				name: 'html',
@@ -254,27 +277,6 @@ const projects = [
 		],
 		image: cifradocesar,
 		source_code_link: 'https://github.com/manuelmontero94/cifrado-cesar',
-	},
-	{
-		name: 'Job IT',
-		description:
-			'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
-		tags: [
-			{
-				name: 'react',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'restapi',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'scss',
-				color: 'pink-text-gradient',
-			},
-		],
-		image: jobit,
-		source_code_link: 'https://github.com/',
 	},
 	{
 		name: 'Trip Guide',
