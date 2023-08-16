@@ -40,6 +40,10 @@ export const navLinks = [
 		id: 'contact',
 		title: 'Contact',
 	},
+	{
+		id: 'cv',
+		title: 'Currículum',
+	},
 ];
 
 const icons = [

@@ -24,16 +24,33 @@ const Navbar = () => {
 					</p>
 				</Link>
 				<ul className="list-none hidden sm:flex flex-row gap-10">
-					{navLinks.map((link, index) => (
-						<li
-							key={link.id}
-							className={`${
-								active === link.title ? 'text-red-600' : 'text-secondary'
-							} hover:text-white text-[18px] font-medium cursor-pointer`}
-							onClick={() => setActive(link.title)}>
-							<a href={`#${link.id}`}> {link.title}</a>
-						</li>
-					))}
+					{navLinks.map((link, index) =>
+						link.id === 'cv' ? (
+							<li
+								key={link.id}
+								className={`${
+									active === link.title ? 'text-red-600' : 'text-secondary'
+								} hover:text-white text-[18px] font-medium cursor-pointer`}>
+								<a download="" href="../assets/pdf/ManuelMontero-CV.pdf">
+									| Currículum
+									{/* <i class="uil uil-download-alt button__icon"></i */}
+									{/* <ion-icon name="download-outline"></ion-icon> */}
+								</a>
+								<ion-icon name="cloud-download-outline"></ion-icon>
+								{/* <div className="font-normal cursor-pointer"> */}
+								{/* </div> */}
+							</li>
+						) : (
+							<li
+								key={link.id}
+								className={`${
+									active === link.title ? 'text-red-600' : 'text-secondary'
+								} hover:text-white text-[18px] font-medium cursor-pointer`}
+								onClick={() => setActive(link.title)}>
+								<a href={`#${link.id}`}> {link.title}</a>
+							</li>
+						)
+					)}
 				</ul>
 
 				<div className="sm:hidden flex flex-1 justify-end items-center">
