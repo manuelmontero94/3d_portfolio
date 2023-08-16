@@ -24,6 +24,9 @@ import {
 	traveladvisor,
 	typescript,
 	web,
+	edel,
+	daniel,
+	roberth,
 } from '../assets';
 
 export const navLinks = [
@@ -125,32 +128,6 @@ const technologies = [
 ];
 
 const experiences = [
-	// {
-	// 	title: 'React.js Developer',
-	// 	company_name: 'Starbucks',
-	// 	icon: starbucks,
-	// 	iconBg: '#383E56',
-	// 	date: 'March 2020 - April 2021',
-	// 	points: [
-	// 		'Developing and maintaining web applications using React.js and other related technologies.',
-	// 		'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-	// 		'Implementing responsive design and ensuring cross-browser compatibility.',
-	// 		'Participating in code reviews and providing constructive feedback to other developers.',
-	// 	],
-	// },
-	// {
-	// 	title: 'React Native Developer',
-	// 	company_name: 'Tesla',
-	// 	icon: tesla,
-	// 	iconBg: '#E6DEDD',
-	// 	date: 'Jan 2021 - Feb 2022',
-	// 	points: [
-	// 		'Developing and maintaining web applications using React.js and other related technologies.',
-	// 		'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-	// 		'Implementing responsive design and ensuring cross-browser compatibility.',
-	// 		'Participating in code reviews and providing constructive feedback to other developers.',
-	// 	],
-	// },
 	{
 		title: 'Full stack Developer',
 		company_name: 'Abbot - Abbox',
@@ -190,8 +167,7 @@ const testimonials = [
 		name: 'Edel Agüero',
 		designation: 'CEO',
 		company: 'Qubo Systems S.A',
-		image:
-			'https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/70784167_10214619900043121_3113283361779482624_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=xrpmkEaaZP8AX9Iirgt&_nc_ht=scontent-mia3-1.xx&oh=00_AfCHwyZkW7-gH7oD2t2GSG3fI2s_JAkp_hrF9UBC01gfUQ&oe=64FD6E35',
+		image: edel,
 	},
 	{
 		testimonial:
@@ -199,8 +175,7 @@ const testimonials = [
 		name: 'Roberth Solís',
 		designation: 'Senior Python Developer',
 		company: 'Gorilla Logic',
-		image:
-			'https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/271901877_1364365900680150_60369834758683314_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=be3454&_nc_ohc=9Zs-pJitUM0AX-pwKp-&_nc_ht=scontent-mia3-2.xx&oh=00_AfATSawfzQOI9oSRCVA0xcYhp5KfAhC1oyu40V0-3K71Qg&oe=64DB621B',
+		image: roberth,
 	},
 	{
 		testimonial:
@@ -208,33 +183,11 @@ const testimonials = [
 		name: 'Daniel Jirón',
 		designation: 'Senior Software Engineer',
 		company: 'Sapiens Corp',
-		image:
-			'https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/223563096_6098992106785240_8451777181952687049_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=F2XYUqgwg2YAX_CGj7U&_nc_ht=scontent-mia3-2.xx&oh=00_AfASBhymSHPgXKrRWeDKHnWgss8Xr4XR2k8iIibR5FQRiw&oe=64DA3FED',
+		image: daniel,
 	},
 ];
 
 const projects = [
-	// {
-	// 	name: 'Car Rent',
-	// 	description:
-	// 		'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-	// 	tags: [
-	// 		{
-	// 			name: 'react',
-	// 			color: 'blue-text-gradient',
-	// 		},
-	// 		{
-	// 			name: 'mongodb',
-	// 			color: 'green-text-gradient',
-	// 		},
-	// 		{
-	// 			name: 'tailwind',
-	// 			color: 'pink-text-gradient',
-	// 		},
-	// 	],
-	// 	image: carrent,
-	// 	source_code_link: 'https://github.com/',
-	// },
 	{
 		name: 'Travel Advisor',
 		description:
@@ -265,10 +218,6 @@ const projects = [
 				name: 'react',
 				color: 'blue-text-gradient',
 			},
-			// {
-			// 	name: 'tailwindcss',
-			// 	color: 'green-text-gradient',
-			// },
 			{
 				name: 'threejs',
 				color: 'green-text-gradient',
@@ -300,7 +249,7 @@ const projects = [
 			},
 		],
 		image: favoritesapp,
-		source_code_link: 'https://github.com/',
+		source_code_link: 'https://github.com/manuelmontero94/favoritesApp',
 	},
 
 	{
@@ -322,7 +271,7 @@ const projects = [
 			},
 		],
 		image: portfolio,
-		source_code_link: 'https://github.com/',
+		source_code_link: 'https://github.com/manuelmontero94/personal_portfolio',
 	},
 
 	{

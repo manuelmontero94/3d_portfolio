@@ -29,13 +29,16 @@ import tailwind from './tech/tailwind.png';
 import threejs from './tech/threejs.svg';
 import typescript from './tech/typescript.png';
 
+import abbott from './abbott.png';
 import logoAbbott from './company/logoAbbott.png';
 import meta from './company/meta.png';
 import shopify from './company/shopify.png';
 import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
+import daniel from './daniel.jpg';
+import edel from './edel.jpg';
 import logoqubo from './logoqubo.jpg';
-import abbott from './abbott.png';
+import roberth from './roberth.jpg';
 
 import carrent from './carrent.png';
 import jobit from './jobit.png';
@@ -83,4 +86,7 @@ export {
 	abbott,
 	logoqubo,
 	logoAbbott,
+	edel,
+	daniel,
+	roberth,
 };
