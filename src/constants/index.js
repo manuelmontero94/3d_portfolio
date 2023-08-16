@@ -4,6 +4,8 @@ import {
 	cifradocesar,
 	creator,
 	css,
+	daniel,
+	edel,
 	favoritesapp,
 	firebase,
 	git,
@@ -18,15 +20,11 @@ import {
 	portfolio2,
 	reactjs,
 	redux,
+	roberth,
 	sqlserver,
-	starbucks,
-	tesla,
 	traveladvisor,
 	typescript,
 	web,
-	edel,
-	daniel,
-	roberth,
 } from '../assets';
 
 export const navLinks = [
@@ -208,6 +206,7 @@ const projects = [
 		],
 		image: traveladvisor,
 		source_code_link: 'https://github.com/manuelmontero94/travel-advisor',
+		page: 'https://travel-advisor.monteromanuel.com',
 	},
 	{
 		name: '3D Personal Portfolio',
@@ -228,7 +227,8 @@ const projects = [
 			},
 		],
 		image: portfolio2,
-		source_code_link: 'https://github.com/manuelmontero94/cifrado-cesar',
+		source_code_link: 'https://github.com/manuelmontero94/3d_portfolio',
+		page: 'https://www.monteromanuel.com',
 	},
 	{
 		name: 'Favorites App',
@@ -250,6 +250,7 @@ const projects = [
 		],
 		image: favoritesapp,
 		source_code_link: 'https://github.com/manuelmontero94/favoritesApp',
+		page: 'https://favorites-app.monteromanuel.com',
 	},
 
 	{
@@ -272,6 +273,7 @@ const projects = [
 		],
 		image: portfolio,
 		source_code_link: 'https://github.com/manuelmontero94/personal_portfolio',
+		page: 'https://first-portfolio.monteromanuel.com',
 	},
 
 	{
@@ -294,6 +296,7 @@ const projects = [
 		],
 		image: cifradocesar,
 		source_code_link: 'https://github.com/manuelmontero94/cifrado-cesar',
+		page: 'https://cesar-encryption.monteromanuel.com',
 	},
 ];
 

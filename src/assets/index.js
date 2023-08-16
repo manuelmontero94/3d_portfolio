@@ -39,6 +39,7 @@ import daniel from './daniel.jpg';
 import edel from './edel.jpg';
 import logoqubo from './logoqubo.jpg';
 import roberth from './roberth.jpg';
+import worldweb from './worldweb.png';
 
 import carrent from './carrent.png';
 import jobit from './jobit.png';
@@ -75,6 +76,7 @@ export {
 	jobit,
 	tripguide,
 	sqlserver,
+	worldweb,
 	mysql,
 	nestjs,
 	firebase,
