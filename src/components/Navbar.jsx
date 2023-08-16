@@ -18,7 +18,7 @@ const Navbar = () => {
 						setActive('');
 						window.scrollTo(0, 0);
 					}}>
-					<img src="../../public/logo.png" alt="logo" className="w-16 h-auto object-contain" />
+					<img src="/logo.png" alt="logo" className="w-14 h-auto object-contain" />
 					<p className="text-white text-[18px] font-bold cursor-pointer flex">
 						Manuel Montero &nbsp;<span className="sm:block hidden">| Portfolio</span>
 					</p>
@@ -33,12 +33,8 @@ const Navbar = () => {
 								} hover:text-white text-[18px] font-medium cursor-pointer`}>
 								<a download="" href="../assets/pdf/ManuelMontero-CV.pdf">
 									| Currículum
-									{/* <i class="uil uil-download-alt button__icon"></i */}
-									{/* <ion-icon name="download-outline"></ion-icon> */}
 								</a>
 								<ion-icon name="cloud-download-outline"></ion-icon>
-								{/* <div className="font-normal cursor-pointer"> */}
-								{/* </div> */}
 							</li>
 						) : (
 							<li
@@ -66,19 +62,36 @@ const Navbar = () => {
 							!toggle ? 'hidden' : 'flex'
 						} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
 						<ul className="list-none flex justify-end items-start flex-col gap-4">
-							{navLinks.map((link, index) => (
-								<li
-									key={link.id}
-									className={`${
-										active === link.title ? 'text-red-600' : 'text-secondary'
-									} font-poppins font-medium  cursor-pointer text-[16px]`}
-									onClick={() => {
-										setToggle(!toggle);
-										setActive(link.title);
-									}}>
-									<a href={`#${link.id}`}> {link.title}</a>
-								</li>
-							))}
+							{navLinks.map((link, index) =>
+								link.id === 'cv' ? (
+									<li
+										key={link.id}
+										className={`${
+											active === link.title ? 'text-red-600' : 'text-secondary'
+										} font-poppins font-medium  cursor-pointer text-[16px]`}
+										onClick={() => {
+											setToggle(!toggle);
+											setActive(link.title);
+										}}>
+										{/* <a href={`#${link.id}`}> {link.title}</a> */}
+										<a download="" href="../assets/pdf/ManuelMontero-CV.pdf">
+											Currículum
+										</a>
+									</li>
+								) : (
+									<li
+										key={link.id}
+										className={`${
+											active === link.title ? 'text-red-600' : 'text-secondary'
+										} font-poppins font-medium  cursor-pointer text-[16px]`}
+										onClick={() => {
+											setToggle(!toggle);
+											setActive(link.title);
+										}}>
+										<a href={`#${link.id}`}> {link.title}</a>
+									</li>
+								)
+							)}
 						</ul>
 					</div>
 				</div>
