@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
+import ManuelCV from '../assets/pdf/ManuelMontero-CV.pdf';
 
 const Navbar = () => {
 	const [active, setActive] = useState('');
@@ -20,7 +21,7 @@ const Navbar = () => {
 					}}>
 					<img src="/logo.png" alt="logo" className="w-14 h-auto object-contain" />
 					<p className="text-white text-[18px] font-bold cursor-pointer flex">
-						Manuel Montero calvo &nbsp;<span className="sm:block hidden">| Portfolio</span>
+						Manuel Montero &nbsp;<span className="sm:block hidden">| Portfolio</span>
 					</p>
 				</Link>
 				<ul className="list-none hidden sm:flex flex-row gap-10">
@@ -31,10 +32,13 @@ const Navbar = () => {
 								className={`${
 									active === link.title ? 'text-red-600' : 'text-secondary'
 								} hover:text-white text-[18px] font-medium cursor-pointer`}>
-								<a download="" href="../assets/pdf/ManuelMontero-CV.pdf">
+								{/* <a download="" href="../assets/pdf/ManuelMontero-CV.pdf">
 									| Currículum
-								</a>
-								<ion-icon name="cloud-download-outline"></ion-icon>
+								</a> */}
+								<Link to={ManuelCV} target="_blank" download="ManuelMontero-CV.pdf">
+									| Currículum
+									<ion-icon name="cloud-download-outline"></ion-icon>
+								</Link>
 							</li>
 						) : (
 							<li
