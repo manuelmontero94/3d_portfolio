@@ -82,8 +82,8 @@ const Navbar = () => {
 											Currículum
 										</a> */}
 										<Link to={ManuelCV} target="_blank" download="ManuelMontero-CV.pdf">
-											| Currículum
-											<ion-icon name="cloud-download-outline"></ion-icon>
+											Currículum
+											{/* <ion-icon name="cloud-download-outline"></ion-icon> */}
 										</Link>
 									</li>
 								) : (
