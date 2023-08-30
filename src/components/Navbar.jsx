@@ -20,7 +20,7 @@ const Navbar = () => {
 					}}>
 					<img src="/logo.png" alt="logo" className="w-14 h-auto object-contain" />
 					<p className="text-white text-[18px] font-bold cursor-pointer flex">
-						Manuel Montero &nbsp;<span className="sm:block hidden">| Portfolio</span>
+						Manuel Montero calvo &nbsp;<span className="sm:block hidden">| Portfolio</span>
 					</p>
 				</Link>
 				<ul className="list-none hidden sm:flex flex-row gap-10">
