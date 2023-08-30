@@ -77,14 +77,12 @@ const Navbar = () => {
 											setToggle(!toggle);
 											setActive(link.title);
 										}}>
-										{/* <a href={`#${link.id}`}> {link.title}</a> */}
-										{/* <a download="" href="../assets/pdf/ManuelMontero-CV.pdf">
+										<a download="ManuelMontero-CV.pdf" href={ManuelCV} target="_blank">
 											Currículum
-										</a> */}
-										<Link to={ManuelCV} target="_blank" download="ManuelMontero-CV.pdf">
+										</a>
+										{/* <Link to={ManuelCV} target="_blank" download="ManuelMontero-CV.pdf">
 											Currículum
-											{/* <ion-icon name="cloud-download-outline"></ion-icon> */}
-										</Link>
+										</Link> */}
 									</li>
 								) : (
 									<li
