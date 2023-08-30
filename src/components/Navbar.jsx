@@ -78,9 +78,13 @@ const Navbar = () => {
 											setActive(link.title);
 										}}>
 										{/* <a href={`#${link.id}`}> {link.title}</a> */}
-										<a download="" href="../assets/pdf/ManuelMontero-CV.pdf">
+										{/* <a download="" href="../assets/pdf/ManuelMontero-CV.pdf">
 											Currículum
-										</a>
+										</a> */}
+										<Link to={ManuelCV} target="_blank" download="ManuelMontero-CV.pdf">
+											| Currículum
+											<ion-icon name="cloud-download-outline"></ion-icon>
+										</Link>
 									</li>
 								) : (
 									<li
